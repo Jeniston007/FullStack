@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Data</title>
+</head>
+<body>
+    <h1>Stored User Data</h1>
+    {{#if data.length}}
+        <ul>
+        {{#each data}}
+            <li>
+                <strong>Name:</strong> {{this.name}} <br>
+                <strong>Email:</strong> {{this.email}} <br>
+                <strong>Message:</strong> {{this.message}}
+                <hr>
+            </li>
+        {{/each}}
+        </ul>
+    {{else}}
+        <p>No data submitted yet.</p>
+    {{/if}}
+</body>
+</html>

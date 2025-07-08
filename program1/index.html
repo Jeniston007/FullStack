@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeniston</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Selva Sahayam Jeniston</h1>
+    <p>MCA Student | MERN & Flutter Developer | Full Stack Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <!-- <a href="#certs">Certificates</a> -->
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently pursuing MCA at Kongu Engineering College. I specialize in Web and Mobile Application Development using MERN Stack and Flutter. I'm passionate about building modern, responsive UIs and scalable backend systems.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Languages: JavaScript, Dart, Java, Python</li>
+      <li>Frontend: HTML, CSS, JavaScript, React, Flutter</li>
+      <li>Backend: Node.js, Firebase, Express.js</li>
+      <li>Tools: GitHub, VS Code, Android Studio, Figma</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project" onclick="showProject('Attendance Tracker', 'Mobile app using Flutter + Firebase to track and manage attendance.')">Attendance Tracker (Flutter)</div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>MCA – Master of Computer Applications</strong><br>Kongu Engineering College (2024–2026)</p>
+  </section>
+
+  <!-- <section id="certs">
+    <h2>Certifications</h2>
+    <ul>
+      <li>React Frontend Development – Udemy</li>
+      <li>Flutter Development – Brainery Spot</li>
+      <li>Employability Skills Training – RND Softech</li>
+    </ul>
+  </section> -->
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:selvasahayamjeniston@gmail.com">selvasahayamjeniston@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/jeniston007">github.com/jeniston007</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/selva-sahayam-jeniston-45850128a/">linkedin.com/in/jeniston</a></p>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
