@@ -1,22 +1,55 @@
-STORING FORM DATA IN JSON AND RENDERING WITH EXPRESS & HANDLEBARS
-AIM:
-To create a NodeJS server using Express that stores data from a form as a JSON file and displays it in another page. The redirect page should be prepared using Handlebars.
-ALGORITHM:
-STEP 1: Start the process.
-STEP 2: Create a project folder and add views (for .hbs files) and public (optional for static files).
-STEP 3: Inside views, create form.hbs for the input form and data.hbs to display submitted data.
-STEP 4: In the root folder, create server.js with Express logic, routing, and view rendering.
-STEP 5: Create an empty data.json file with {} to store submitted data.
-STEP 6: Run npm init -y in the terminal to initialize the Node.js project.
-STEP 7: Install dependencies using npm install express body-parser hbs.
-STEP 8: Set up middleware, view engine, and routes for /, /submit, and /data in server.js.
-STEP 9: Run the server using node app.js and open http://localhost:3000 in a browser.
-STEP 10: Fill and submit the form, view saved data on /data, and stop the server when done.
-DESIGN:
- FormDataProject/ ├── views/ │   ├── form.hbs │   └── data.hbs ├── data.json ├── app.js ├── package.json 
+# EX.NO: 02  
+# DATE:  
 
-CODING:
-form.hbs:
+# STORING FORM DATA IN JSON AND RENDERING WITH EXPRESS & HANDLEBARS
+
+## AIM:  
+To create a NodeJS server using Express that stores data from a form as a JSON file and displays it in another page. The redirect page should be prepared using Handlebars.
+
+---
+
+## ALGORITHM:
+1. Start the process.  
+2. Create a project folder and add `views` (for `.hbs` files) and `public` (optional for static files).  
+3. Inside `views`, create `form.hbs` for the input form and `data.hbs` to display submitted data.  
+4. In the root folder, create `app.js` (or `server.js`) with Express logic, routing, and view rendering.  
+5. Create an empty `data.json` file with `[]` to store submitted data.  
+6. Run `npm init -y` in the terminal to initialize the Node.js project.  
+7. Install dependencies using:  
+   ```bash
+   npm install express body-parser hbs
+
+8. Set up middleware, view engine, and routes in `server.js`:
+   - Route `/` → renders `form.hbs`
+   - Route `/submit` → handles POST request and saves data to `data.json`
+   - Route `/data` → reads and displays data using `data.hbs`
+
+9. Run the server using the following command:
+   ```bash
+   node app.js
+
+10. Fill and submit the form, then:
+
+    - Visit: `http://localhost:3000/data` to view saved data.
+    - Stop the server by pressing `Ctrl + C` in the terminal.
+
+---
+
+## DESIGN:
+
+FormDataProject/
+- views/
+- -- form.hbs
+- -- data.hbs
+- data.json
+- app.js
+- package.json
+
+---
+
+## CODING:
+### form.hbs:
+``` html
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,8 +66,9 @@ form.hbs:
 </body>
 </html>
 
-
-Data.hsb:
+```
+### Data.hsb:
+``` html
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,8 +92,9 @@ Data.hsb:
     {{/if}}
 </body>
 </html>
-
-Server.js:
+```
+### Server.js:
+``` js
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -118,30 +153,24 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+```
 
-
-Data.json:
+### Data.json:
+``` json
 []
+```
 
-OUTPUT:
+---
+
+## OUTPUT:
 
 
 ![image](https://github.com/user-attachments/assets/529e8a06-3309-4d39-93e2-8c4973770bd6)
 
 ![image](https://github.com/user-attachments/assets/f11cdf96-77ba-4888-96cd-7b1a12d3ec2c)
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-RESULT:
+## RESULT:
 Thus, the form data was successfully stored in a JSON file and displayed using Handlebars in another page using NodeJS and Express
+---
